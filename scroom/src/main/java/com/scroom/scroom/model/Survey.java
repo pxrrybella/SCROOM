@@ -1,5 +1,7 @@
 package com.scroom.scroom.model;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,6 +25,10 @@ public class Survey {
     private Integer survey_id;
     
     private Integer userweb_id;
+
+    private Date date;
+
+    private String rol;
 
     private String answer1;
 
