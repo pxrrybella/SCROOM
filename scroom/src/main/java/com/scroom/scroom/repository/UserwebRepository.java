@@ -12,6 +12,6 @@ public interface UserwebRepository extends JpaRepository<Userweb, Integer>{
     /* @Query(value= "SELECT Userweb.userName, Userweb.lastName, Proyect.proyectName FROM Userweb JOIN UserwebProyect ON Userweb.userweb_id = UserwebProyect.userweb_id JOIN Proyect ON Proyect.proyect_id = UserwebProyect.proyect_id", nativeQuery=true)
     List<Userweb> findProyectosByUserweb(); */
 
-    @Query(value= "SELECT Userweb.userName, Userweb.lastName, Proyect.proyectName FROM Userweb JOIN UserwebProyect ON Userweb.userweb_id = UserwebProyect.userweb_id JOIN Proyect ON Proyect.proyect_id = UserwebProyect.proyect_id WHERE userName like ?1", nativeQuery=true)
-    List<Proyect> findProyectsByUserweb(String userName);
+    @Query(value= "SELECT Userweb.user_name, Userweb.last_name, Proyect.proyect_name FROM Userweb JOIN UserwebProyect ON Userweb.userweb_id = UserwebProyect.userweb_id JOIN Proyect ON Proyect.proyect_id = UserwebProyect.proyect_id where user_name like '?1';", nativeQuery=true)
+    List<Proyect> findProyectsByUserweb(String user_name);
 }

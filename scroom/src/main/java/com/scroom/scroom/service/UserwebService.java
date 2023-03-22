@@ -32,8 +32,8 @@ public class UserwebService {
     public List<Userweb> findAll(){
         return userwebRepository.findAll();
     }
-    public List<Proyect> findProyectsByUserweb(String userName){
-        return userwebRepository.findProyectsByUserweb(userName);
+    public List<Proyect> findProyectsByUserweb(String user_name){
+        return userwebRepository.findProyectsByUserweb(user_name);
     }
     
 

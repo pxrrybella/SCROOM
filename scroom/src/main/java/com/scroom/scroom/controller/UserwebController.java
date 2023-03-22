@@ -49,8 +49,8 @@ public class UserwebController {
         return userwebService.findAll();
     }
 
-    @GetMapping("/findproyects/{userName}")
-    public List<Proyect> findProyectsByUserweb(@PathVariable String userName){
-        return userwebService.findProyectsByUserweb(userName);
+    @GetMapping("/findproyects/{user_name}")
+    public List<Proyect> findProyectsByUserweb(@PathVariable String user_name){
+        return userwebService.findProyectsByUserweb(user_name);
     }
 }

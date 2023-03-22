@@ -21,7 +21,6 @@ import lombok.Setter;
 public class Survey {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
     private Integer survey_id;
     
     private Integer userweb_id;

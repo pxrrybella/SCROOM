@@ -1,5 +1,6 @@
 package com.scroom.scroom.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,11 +21,11 @@ import lombok.Setter;
 public class Proyect {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
     private Integer proyect_id;
     
-    private String adminName;
+    @Column(name = "admin_name")
+    private String admin_name;
 
-    @Size(max = 15, message = "Máximo 15 caracteres")
-    private String proyectName;
+    @Column(name = "proyect_name")
+    private String proyect_name;
 }

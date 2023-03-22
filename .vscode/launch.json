@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ScroomApplication<scroom>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.scroom.scroom.ScroomApplication",
+            "projectName": "scroom",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -19,6 +19,5 @@ import lombok.Setter;
 public class Sprint {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
     private Integer sprint_id;
 }
