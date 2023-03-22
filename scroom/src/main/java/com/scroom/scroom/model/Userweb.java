@@ -24,7 +24,13 @@ public class Userweb {
     private Integer usuario_id;
 
     @Size(max = 25, message = "Debe introducir máximo 25 caracteres")
+    private String company;
+
+    @Size(max = 25, message = "Debe introducir máximo 25 caracteres")
     private String userName;
+
+    @Size(max = 25, message = "Debe introducir máximo 25 caracteres")
+    private String firstName;
 
     @Size(max = 25, message = "Debe introducir máximo 25 caracteres")
     private String lastName;

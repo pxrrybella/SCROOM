@@ -33,7 +33,7 @@ public class UserwebService {
         return userwebRepository.findAll();
     }
     public List<Proyect> findProyectsByUserweb(String userName){
-        return userwebRepository.findProyectosByUserweb(userName);
+        return userwebRepository.findProyectsByUserweb(userName);
     }
     
 
