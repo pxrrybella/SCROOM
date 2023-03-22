@@ -5,9 +5,11 @@ use proyectBootcampSQL;
 create table Userweb(
 	userweb_id integer primary key auto_increment not null,
     userName varchar (25),
+    firstName varchar (25),
     lastName varchar (25),
     email varchar (64),
-    userPassword varchar (25)
+    userPassword varchar (25),
+    company varchar (25)
 );
 
 create table Proyect(
@@ -19,6 +21,8 @@ create table Proyect(
 create table Survey(
 	survey_id integer primary key auto_increment not null,
     userweb_id integer not null,
+    rol varchar (25),
+    date date,
     answer1 varchar (25),
     answer2 varchar (25),
     answer3 varchar (25),
@@ -52,8 +56,6 @@ insert into userwebProyect (userweb_id, proyect_id) values (1,1),
 ;
 
 select * from userwebProyect;
-
-DELETE FROM userwebProyect WHERE userproyect_id = 2;
 
 select * from Userweb;
 select * from Proyect;
