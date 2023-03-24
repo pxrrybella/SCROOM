@@ -14,37 +14,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.scroom.scroom.model.Proyect;
-import com.scroom.scroom.service.ProyectService;
+import com.scroom.scroom.model.Project;
+import com.scroom.scroom.service.ProjectService;
 
 @Controller
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/proyect")
-public class ProyectController {
-    private ProyectService proyectService;
+@RequestMapping("/project")
+public class ProjectController {
+    private ProjectService projectService;
 
-    public ProyectController(@Autowired ProyectService proyectService){
-        this.proyectService = proyectService;
+    public ProjectController(@Autowired ProjectService projectService){
+        this.projectService = projectService;
     }
 
     @PostMapping("/save")
-    public void saveProyect(@RequestBody Proyect proyect){
-        proyectService.saveProyect(proyect);
+    public void saveProject(@RequestBody Project project){
+        projectService.saveProject(project);
     }
 
     @PutMapping("/update")
-    public void updateProyect(@RequestBody Proyect proyect){
-        proyectService.updateProyect(proyect);
+    public void updateProject(@RequestBody Project project){
+        projectService.updateProject(project);
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteProyect(@PathVariable Integer id){
-        proyectService.deleteProyect(id);
+    public void deleteProject(@PathVariable Integer id){
+        projectService.deleteProject(id);
     }
 
     @GetMapping("/findall")
-    public List<Proyect> findAll(){
-        return proyectService.findAll();
+    public List<Project> findAll(){
+        return projectService.findAll();
     }
 }

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.scroom.scroom.model.Proyect;
 import com.scroom.scroom.model.Userweb;
 import com.scroom.scroom.service.UserwebService;
 
@@ -49,8 +48,8 @@ public class UserwebController {
         return userwebService.findAll();
     }
 
-    /* @GetMapping("/findproyects/{user_name}")
-    public List<Proyect> findProyectsByUserweb(@PathVariable String user_name){
-        return userwebService.findProyectsByUserweb(user_name);
+    /* @GetMapping("/findprojects/{user_name}")
+    public List<Project> findProjectsByUserweb(@PathVariable String user_name){
+        return userwebService.findProjectsByUserweb(user_name);
     } */
 }
