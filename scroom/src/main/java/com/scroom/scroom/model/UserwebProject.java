@@ -15,16 +15,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name = "UserwebProyect")
-public class UserwebProyect {
+@Entity(name = "UserwebProject")
+public class UserwebProject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer userwebproyect_id;
+    private Integer userwebproject_id;
 
     @Column(name = "userweb_id")
     private Integer userweb_id;
 
-    @Column(name = "proyect_id")
-    private Integer proyect_id;
+    @Column(name = "project_id")
+    private Integer project_id;
     
 }
