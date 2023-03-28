@@ -57,6 +57,6 @@ select * from Project;
 
 select * from userwebProject;
 
-SELECT Userweb.user_name, Userweb.last_name, Project.project_name
+SELECT Userweb.user_name, Project.project_name
 FROM Userweb JOIN UserwebProject ON Userweb.userweb_id = UserwebProject.userweb_id JOIN Project ON Project.project_id = UserwebProject.project_id
-where user_name like '%isa%';
+WHERE user_name LIKE '%isa%';
