@@ -43,7 +43,7 @@ public class ProjectController {
         projectService.deleteProject(id);
     }
 
-    @GetMapping("/findall")
+    @GetMapping("/findAll")
     public List<Project> findAll(){
         return projectService.findAll();
     }

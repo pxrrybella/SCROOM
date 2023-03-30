@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.scroom.scroom.model.Project;
 import com.scroom.scroom.model.UserwebProject;
 import com.scroom.scroom.service.UserwebProjectService;
 

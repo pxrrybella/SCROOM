@@ -1,7 +1,5 @@
 package com.scroom.scroom.model;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,15 +15,18 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name="Sprint")
-public class Sprint {
+@Entity(name = "Company")
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer sprint_id;
+    private Integer company_id;
 
-    @Column(name = "start_date")
-    private Date start_date;
+    @Column(name = "company_rut")
+    private Integer company_rut;
 
-    @Column(name = "end_date")
-    private Date end_date;
+    @Column(name = "company_name")
+    private String company_name;
+
+    @Column(name = "general_score")
+    private Double general_score;
 }

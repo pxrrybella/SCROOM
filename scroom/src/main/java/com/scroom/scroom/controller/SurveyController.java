@@ -28,22 +28,22 @@ public class SurveyController {
         this.surveyService = surveyService;
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public void saveSurvey(@RequestBody Survey survey){
         surveyService.saveSurvey(survey);
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public void updateSurvey(@RequestBody Survey survey){
         surveyService.updateSurvey(survey);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete/{id}")
     public void deleteSurvey(@PathVariable Integer id){
         surveyService.deleteSurvey(id);
     }
 
-    @GetMapping
+    @GetMapping("/findAll")
     public List<Survey> findAll(){
         return surveyService.findAll();
     }

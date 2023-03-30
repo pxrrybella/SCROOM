@@ -43,7 +43,7 @@ public class UserwebController {
         userwebService.deleteUserweb(id);
     }
 
-    @GetMapping("/findall")
+    @GetMapping("/findAll")
     public List<Userweb> findAll(){
         return userwebService.findAll();
     }

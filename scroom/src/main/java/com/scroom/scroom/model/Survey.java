@@ -22,25 +22,31 @@ public class Survey {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer survey_id;
-    
-    @Column(name = "userweb_id")
-    private Integer userweb_id;
 
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "rol")
-    private String rol;
-
     @Column(name = "answer1")
-    private String answer1;
+    private Integer answer1;
 
     @Column(name = "answer2")
-    private String answer2;
+    private Integer answer2;
 
     @Column(name = "answer3")
-    private String answer3;
+    private Integer answer3;
 
     @Column(name = "answer4")
-    private String answer4;
+    private Integer answer4;
+
+    @Column(name = "answer5")
+    private Integer answer5;
+    
+    @Column(name = "userweb_id")
+    private Integer userweb_id;
+
+    @Column(name = "sprint_id")
+    private Integer sprint_id;
+
+    @Column(name = "company_id")
+    private Integer company_id;
 }

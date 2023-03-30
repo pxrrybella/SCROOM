@@ -36,8 +36,11 @@ public class Userweb {
     @Column(name = "user_password")
     private String user_password;
 
-    @Column(name = "company")
-    private String company;
+    @Column(name = "company_position")
+    private String company_position;
+
+    @Column(name = "company_id")
+    private Integer company_id;
 
     //private boolean accountNonLocked;
         
