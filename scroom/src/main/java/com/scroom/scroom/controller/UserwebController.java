@@ -48,6 +48,21 @@ public class UserwebController {
         return userwebService.findAll();
     }
 
+    @GetMapping("/firstname/{user_name}")
+    public String findUserwebFirstName(@PathVariable String user_name){
+        return userwebService.findUserwebFirstName(user_name);
+    }
+
+    @GetMapping("/lastname/{user_name}")
+    public String findUserwebLastName(@PathVariable String user_name){
+        return userwebService.findUserwebLastName(user_name);
+    }
+
+    @GetMapping("/firstlastname/{user_name}")
+    public Userweb findUserwebFirstLastName(@PathVariable String user_name){
+        return userwebService.findUserwebFirstLastName(user_name);
+    }
+
     /* @GetMapping("/findprojects/{user_name}")
     public List<Project> findProjectsByUserweb(@PathVariable String user_name){
         return userwebService.findProjectsByUserweb(user_name);

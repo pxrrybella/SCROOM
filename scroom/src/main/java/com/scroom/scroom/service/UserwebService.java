@@ -31,6 +31,18 @@ public class UserwebService {
     public List<Userweb> findAll(){
         return userwebRepository.findAll();
     }
+
+    public String findUserwebFirstName(String user_name){
+        return userwebRepository.findUserwebFirstName(user_name);
+    }
+
+    public String findUserwebLastName(String user_name){
+        return userwebRepository.findUserwebLastName(user_name);
+    }
+
+    public Userweb findUserwebFirstLastName(String user_name){
+        return userwebRepository.findUserwebFirstLastName(user_name);
+    }
     
 
 
