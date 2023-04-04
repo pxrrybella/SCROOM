@@ -89,7 +89,7 @@ VALUES
 INSERT INTO Project (admin_name, project_name)
 VALUES 
 ('yago123', 'Proyecto A'),
-('isabella345', 'Proyecto B');
+('mary111', 'Proyecto B');
 INSERT INTO Sprint (start_date, end_date, project_id)
 VALUES 
 ('2022-01-01', '2022-01-15', 1),
