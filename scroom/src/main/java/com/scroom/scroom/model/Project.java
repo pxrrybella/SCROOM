@@ -26,4 +26,7 @@ public class Project {
 
     @Column(name = "project_name")
     private String project_name;
+
+    @Column(name = "project_code")
+    private String project_code;
 }

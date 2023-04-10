@@ -16,8 +16,10 @@ create table Userweb(
 create table Project(
 	project_id integer primary key auto_increment not null,
     admin_name varchar (30),
-    project_name varchar (50)
+    project_name varchar (50),
+    project_code integer (7)
 );
+
 create table Survey(
 	survey_id integer primary key auto_increment not null,
     date date,
