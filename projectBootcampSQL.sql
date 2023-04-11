@@ -40,7 +40,7 @@ create table Sprint(
     project_id integer not null
 );
 
-create table UserwebProject(
+create table Userweb_Project(
 	userProject_id integer primary key auto_increment not null,
     userweb_id integer not null,
     project_id integer not null
@@ -57,10 +57,10 @@ create table Company(
 alter table Userweb
 add foreign key (company_id) references Company(company_id);
 
-alter table UserwebProject
+alter table Userweb_Project
 add foreign key (userweb_id) references Userweb(userweb_id);
 
-alter table UserwebProject
+alter table Userweb_Project
 add foreign key (project_id) references Project(project_id);
 
 alter table Survey
@@ -98,7 +98,7 @@ VALUES
 ('2022-02-01', '2022-02-15', 1),
 ('2022-03-01', '2022-03-15', 2),
 ('2022-04-01', '2022-04-15', 2);
-INSERT INTO UserwebProject (userweb_id, project_id)
+INSERT INTO Userweb_Project (userweb_id, project_id)
 VALUES 
 (1, 1),
 (2, 1),
@@ -139,6 +139,9 @@ select * from Sprint;
 
 #--------------------------------------------QUERYS PERSONALIZADAS-----------------------------------------------------
 SELECT Userweb.user_name, Project.project_name
-FROM Userweb JOIN UserwebProject ON Userweb.userweb_id = UserwebProject.userweb_id JOIN Project ON Project.project_id = UserwebProject.project_id
+FROM Userweb JOIN Userweb_Project ON Userweb.userweb_id = Userweb_Project.userweb_id JOIN Project ON Project.project_id = Userweb_Project.project_id
 WHERE user_name LIKE '%isa%';
 #--------------------------------------------QUERYS PERSONALIZADAS-----------------------------------------------------
+select Userweb.userweb_id, Userweb.user_name, Userweb.first_name, Userweb.last_name, Userweb.email, Userweb.user_password, Userweb.company_position, Userweb.company_id
+from Userweb join Userweb_Project on Userweb.userweb_id = Userweb_Project.userweb_id
+where Userweb_Project.project_id = 2;
