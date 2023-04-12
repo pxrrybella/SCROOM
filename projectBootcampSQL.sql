@@ -28,6 +28,11 @@ create table Survey(
     answer3 integer,
     answer4 integer,
     answer5 integer,
+    answer6 integer,
+    answer7 integer,
+    answer8 integer,
+    answer9 integer,
+    answer10 integer,
     userweb_id integer not null,
     sprint_id integer not null,
     company_id integer not null
