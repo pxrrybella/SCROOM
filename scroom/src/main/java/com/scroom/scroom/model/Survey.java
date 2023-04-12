@@ -40,6 +40,21 @@ public class Survey {
 
     @Column(name = "answer5")
     private Integer answer5;
+
+    @Column(name = "answer6")
+    private Integer answer6;
+
+    @Column(name = "answer7")
+    private Integer answer7;
+
+    @Column(name = "answer8")
+    private Integer answer8;
+
+    @Column(name = "answer9")
+    private Integer answer9;
+
+    @Column(name = "answer10")
+    private Integer answer10;
     
     @Column(name = "userweb_id")
     private Integer userweb_id;

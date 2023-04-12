@@ -7,6 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import com.scroom.scroom.model.UserwebProject;
 import com.scroom.scroom.repository.UserwebProjectRepository;
+import com.scroom.scroom.model.Userweb;
 
 @Service
 @Transactional
@@ -34,5 +35,9 @@ public class UserwebProjectService {
 
     public List<String> projectsByUserweb(String user_name){
         return userwebProjectRepository.findProjectsByUserweb(user_name);
+    }
+
+    public List<Userweb> userwebByProjects(Integer project_id){
+        return userwebProjectRepository.findUserwebByProjects(project_id);
     }
 }

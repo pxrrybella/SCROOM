@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.scroom.scroom.model.UserwebProject;
 import com.scroom.scroom.service.UserwebProjectService;
+import com.scroom.scroom.model.Userweb;
 
 @Controller
 @CrossOrigin("*")
@@ -51,5 +52,10 @@ public class UserwebProjectController {
     @GetMapping("/projectsByUserweb/{user_name}")
     public List<String> projectsByUserweb(@PathVariable String user_name){
         return userwebProjectService.projectsByUserweb(user_name);
+    }
+
+    @GetMapping("/userwebByProjects/{project_id}")
+    public List<Userweb> userwebByProjects(@PathVariable Integer project_id){
+        return userwebProjectService.userwebByProjects(project_id);
     }
 }
