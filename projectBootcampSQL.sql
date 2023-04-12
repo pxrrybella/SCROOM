@@ -41,7 +41,7 @@ create table Sprint(
 );
 
 create table Userweb_Project(
-	userProject_id integer primary key auto_increment not null,
+	userweb_project_id integer primary key auto_increment not null,
     userweb_id integer not null,
     project_id integer not null
 );
