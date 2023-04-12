@@ -55,7 +55,7 @@ public class UserwebProjectController {
     }
 
     @GetMapping("/userwebByProjects/{project_id}")
-    public List<Userweb> userwebByProjects(@PathVariable Integer project_id){
+    public List<Integer> userwebByProjects(@PathVariable Integer project_id){
         return userwebProjectService.userwebByProjects(project_id);
     }
 }
