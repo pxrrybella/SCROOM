@@ -49,11 +49,6 @@ public class UserwebProjectController {
         return userwebProjectService.findAll();
     }
 
-    @GetMapping("/projectsByUserweb/{user_name}")
-    public List<String> projectsByUserweb(@PathVariable String user_name){
-        return userwebProjectService.projectsByUserweb(user_name);
-    }
-
     @GetMapping("/userwebByProjects/{project_id}")
     public List<Integer> userwebByProjects(@PathVariable Integer project_id){
         return userwebProjectService.userwebByProjects(project_id);

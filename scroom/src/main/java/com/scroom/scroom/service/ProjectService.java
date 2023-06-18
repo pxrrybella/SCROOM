@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.aspectj.weaver.bcel.asm.AsmDetector;
 import org.springframework.stereotype.Service;
 
 import com.scroom.scroom.model.Project;
@@ -33,6 +34,10 @@ public class ProjectService {
 
     public List<Project> findAll(){
         return ProjectRepository.findAll();
+    }
+
+    public List<String> findProjectsByUserweb(String admin_name){
+        return ProjectRepository.findProjectsByUserweb(admin_name);
     }
     
 

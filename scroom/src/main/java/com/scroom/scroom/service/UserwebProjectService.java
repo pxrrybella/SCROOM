@@ -34,10 +34,6 @@ public class UserwebProjectService {
         return userwebProjectRepository.findAll();
     }
 
-    public List<String> projectsByUserweb(String user_name){
-        return userwebProjectRepository.findProjectsByUserweb(user_name);
-    }
-
     public List<Integer> userwebByProjects(Integer project_id){
         return userwebProjectRepository.findUserwebByProjects(project_id);
     }

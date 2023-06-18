@@ -47,4 +47,9 @@ public class ProjectController {
     public List<Project> findAll(){
         return projectService.findAll();
     }
+
+    @GetMapping("/userweb/{admin_name}")
+    public List<String> findProjectsByUserweb(@PathVariable String admin_name){
+        return projectService.findProjectsByUserweb(admin_name);
+    }
 }
