@@ -32,5 +32,25 @@ Trabajamos con seis tablas para manejar la información de manera precisa obteni
 - antlr
 - jstl
 
+## Server local:
+Para correr el server de manera local utilizamos:
+
+- IDE Visual Studio Code ( Aquí utilizamos las siguientes extensiones: Springboot Dashboard (Microsoft), Springboot Tools (VMWare), Spring Initializr Java Support (Microsoft), Debugger for Java (Microsoft), Extension Pack for Java (Microsoft), Maven for Java (Microsoft), Project Manager for Java (Microsoft), Test Runner for Java (Microsoft), Language Support for Java(TM) (RedHat), todos están disponibles desde Visual Studio Code )
+- Java
+- JDK
+- MySQL
+- MySQL Workbench
+Al clonar el repositorio, necesitaremos primero crear y poblar la base de datos.
+
+Para eso abrimos MySQL Workbench y buscamos el archivo ``projectBootcampSQL.sql`` que se encuentra en la carpeta del proyecto.
+
+Presionamos el tercer icono para ejecutar el script.
+
+Una vez creada y poblada la base dedatos, abrimos la carpeta del proyecto con Visual Studio.
+
+Al estar cargadas las dependencias (se encuentran en el archivo ``pom.xml``), usamos el Springboot Dashboard desde el último icono del Primary Side Bar. En el apartado de "APPS", corremos la aplicación "scroom".
+
+Una vez esté funcionando tendremos acceso a un server local con los endpoints disponibles en la carpeta "controller" para cada tabla (CRUD).
+
 ## Última actualización:
 - Query personalizada.
